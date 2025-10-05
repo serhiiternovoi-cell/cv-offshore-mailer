@@ -23,15 +23,12 @@ export function CardFooter({ className = "", ...props }: CardProps) {
   return <div {...props} className={⁠ px-6 pb-6 ${className} ⁠} />;
 }
 
-interface TextProps {
-  children?: React.ReactNode;
-  className?: string;
+export function CardTitle({ className = "", ...props }: CardProps) {
+  return <h3 {...props} className={⁠ text-lg font-semibold ${className} ⁠} />;
 }
 
-export function CardTitle({ children, className = "" }: TextProps) {
-  return <div className={⁠ text-lg font-semibold ${className} ⁠}>{children}</div>;
-}
-
-export function CardDescription({ children, className = "" }: TextProps) {
-  return <div className={⁠ text-sm text-neutral-500 ${className} ⁠}>{children}</div>;
+export function CardDescription({ className = "", ...props }: CardProps) {
+  return (
+    <p {...props} className={⁠ text-sm text-neutral-500 ${className} ⁠} />
+  );
 }
