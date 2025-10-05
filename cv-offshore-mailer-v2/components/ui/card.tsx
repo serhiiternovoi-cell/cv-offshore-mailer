@@ -1,7 +1,33 @@
+import * as React from "react";
 
-export function Card(p:any){return <div className={"rounded-2xl border border-neutral-200 bg-white shadow-soft "+(p.className||"")} {...p}/>}
-export function CardHeader(p:any){return <div className={"p-6 "+(p.className||"")} {...p}/>} 
-export function CardContent(p:any){return <div className={"px-6 pb-6 "+(p.className||"")} {...p}/>} 
-export function CardFooter(p:any){return <div className={"px-6 pb-6 "+(p.className||"")} {...p}/>} 
-export function CardTitle({children}:{children:any}){return <div className="text-lg font-semibold">{children}</div>} 
-export function CardDescription({children}:{children:any}){return <div className="text-sm text-neutral-500">{children}</div>}
+type DivProps = React.HTMLAttributes<HTMLDivElement>;
+type TitleProps = { children?: React.ReactNode; className?: string };
+
+export function Card({ className = "", ...props }: DivProps) {
+  return (
+    <div
+      className={⁠ rounded-2xl border border-neutral-200 bg-white shadow-soft ${className} ⁠}
+      {...props}
+    />
+  );
+}
+
+export function CardHeader({ className = "", ...props }: DivProps) {
+  return <div className={⁠ p-6 ${className} ⁠} {...props} />;
+}
+
+export function CardContent({ className = "", ...props }: DivProps) {
+  return <div className={⁠ px-6 pb-6 ${className} ⁠} {...props} />;
+}
+
+export function CardFooter({ className = "", ...props }: DivProps) {
+  return <div className={⁠ px-6 pb-6 ${className} ⁠} {...props} />;
+}
+
+export function CardTitle({ children, className = "" }: TitleProps) {
+  return <div className={⁠ text-lg font-semibold ${className} ⁠}>{children}</div>;
+}
+
+export function CardDescription({ children, className = "" }: TitleProps) {
+  return <div className={⁠ text-sm text-neutral-500 ${className} ⁠}>{children}</div>;
+}
