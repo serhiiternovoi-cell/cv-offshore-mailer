@@ -1,5 +1,3 @@
-import * as React from "react";
-
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
