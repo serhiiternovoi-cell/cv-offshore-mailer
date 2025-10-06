@@ -1,0 +1,1 @@
+export default function Privacy(){return(<main className="container py-12"><h1 className="text-3xl font-bold">Privacy Policy</h1><p className="mt-4 text-neutral-600">We do not store your CV after sending. Describe data handling here.</p></main>)}

@@ -1,0 +1,1 @@
+export default function Terms(){return(<main className="container py-12"><h1 className="text-3xl font-bold">Terms of Service</h1><p className="mt-4 text-neutral-600">Describe scope, pricing, refunds, delivery timeframes, limitations.</p></main>)}
